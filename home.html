@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa+</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f3e6;;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+       
+        h1.titulo {
+            font-size: 3rem;
+            color: #ff4500;
+            margin: 20px 0;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        h4 p {
+            font-size: 1.2rem;
+            margin: 5px;
+            color: #ff4500;
+            font-weight: bold;
+        }
+
+      
+        nav.navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .hamburger {
+            display: none; 
+        }
+
+        ul.nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        ul.nav-links li {
+            margin: 0 15px;
+        }
+
+        ul.nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        ul.nav-links li a:hover {
+            color: #ff4500;
+        }
+
+      
+        div {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff4500;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f3c510;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1 class="titulo">Alfa+</h1>
+        <h4>
+            <p>A prender</p>
+            <p>B uscar</p>
+            <p>C riar</p>
+       </h4>
+
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div>
+        <h2>A tecnologia nas letras!</h2>
+        <h3>
+            Sabia que a taxa de adultos analfabetos no Brasil é de aproximadamente 13,9 milhões de pessoas? A alfabetização desde a infância é crucial principalmente no mundo cheio de tecnologia que vivemos atualmente. Mas quem disse que existe uma idade certa para aprender? O aprendizado é essencial para o crescimento profissional e social, venha conosco aprender os conceitos básicos da leitura e escrita na era digital!
+        </h3>
+    
+        <button onclick="window.location.href='pagina2.html'">Acompanhamento adulto</button>
+        <button onclick="window.location.href='Infantil.html'">Acompanhamento Infantil</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa +</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .titulo {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ff6600; 
+        }
+        .subtitulo {
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+            line-height: 1.5;
+        }
+        .subtitulo p {
+            margin: 5px 0;
+        }
+        h1, h2, p {
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #ff6600;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+        .navbar {
+            background-color: #ff6600;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar li {
+            display: inline;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hamburger {
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #e65c00;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                display: none;
+            }
+            .navbar.active ul {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+            .hamburger span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px 0;
+                transition: 0.4s;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Alfa+</h1>
+        <div class="subtitulo">
+            <p><strong>A</strong>prender</p>
+            <p><strong>B</strong>uscar</p>
+            <p><strong>C</strong>riar</p>
+        </div>
+
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <h1>Primeiros passos para um bom aprendizado.</h1>
+
+        <h2>1. Confiança e Autoestima na Alfabetização</h2>
+        <p>
+            A confiança e a autoestima desempenham um papel crucial no aprendizado. Muitos adultos que buscam alfabetização carregam consigo experiências educacionais passadas negativas, que podem ter deixado marcas profundas em sua autoestima. 
+            Entender que erros fazem parte do processo de aprendizado é fundamental para construir a confiança desses alunos.
+        </p>
+
+        <h2>2. Importância ao Acesso à Tecnologia</h2>
+        <p>
+            O acesso à tecnologia é vital para a alfabetização de adultos, pois amplia as oportunidades de aprendizado e permite flexibilidade, permitindo que os alunos estudem no seu próprio ritmo e em qualquer lugar.
+        </p>
+
+        <h2>3. Preparação para o Mercado de Trabalho</h2>
+        <p>
+            A preparação para o mercado de trabalho é um aspecto essencial da alfabetização de adultos, especialmente quando integrada com a tecnologia. Em um mercado de trabalho cada vez mais digitalizado, as habilidades tecnológicas são fundamentais.
+        </p>
+
+        <h2>4. Desenvolvimento de Habilidades Digitais</h2>
+        <p>
+            Em um mundo cada vez mais digital, a alfabetização vai além da leitura e escrita tradicionais. Habilidades digitais, como o uso de software básico e navegação na web, são essenciais para o mercado de trabalho.
+        </p>
+
+        <h2>5. Acesso a Informação e Recursos</h2>
+        <p>
+            A internet é uma ferramenta poderosa para o acesso a informações e recursos. Adultos alfabetizados digitalmente podem buscar informações e acessar serviços online com mais facilidade.
+        </p>
+
+        <h2>6. Inclusão Social e Econômica</h2>
+        <p>
+            A tecnologia ajuda a reduzir a exclusão social e econômica, proporcionando oportunidades de aprendizado e desenvolvimento que podem não estar disponíveis localmente.
+        </p>
+
+        <h2>7. Promoção da Autoeficácia e Confiança</h2>
+        <p>
+            O acesso à tecnologia pode ajudar a construir a confiança dos adultos em suas habilidades de aprendizado, proporcionando um senso de realização e competência.
+        </p>
+
+        <h2>8. Flexibilidade e Acesso Remoto</h2>
+        <p>
+            Ferramentas tecnológicas permitem que os alunos acessem materiais e participem de cursos a qualquer hora e em qualquer lugar, o que é uma vantagem significativa para adultos com horários irregulares.
+        </p>
+
+        <h2>9. Ampliação das Oportunidades de Aprendizado</h2>
+        <p>
+            A tecnologia oferece uma vasta gama de recursos educativos, como plataformas de e-learning e aplicativos interativos, que podem ser utilizados para complementar o ensino tradicional.
+        </p>
+
+        <h2>10. Segurança e Privacidade Online</h2>
+        <p>
+            A alfabetização tecnológica deve incluir a segurança e a privacidade online, ensinando a usar senhas fortes, autenticação de dois fatores, e a reconhecer ameaças digitais como phishing e malware.
+        </p>
+
+        <div class="buttons">
+            <button onclick="window.location.href='pagina3.html'">Continuar</button>
+            <button onclick="window.location.href='home.html'">Voltar para a página inicial</button>
+        </div>
+    </div>
+</body>
+</html>

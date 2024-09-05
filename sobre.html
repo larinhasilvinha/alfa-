@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa +</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f3e6; 
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+       
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #FF5722; 
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fade-in 1.5s ease-in;
+        }
+
+        h4 p {
+            color: #FF7043;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            animation: slide-in-top 1s ease-out;
+            text-align: center; 
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #FF5722; 
+            color: white;
+        }
+
+        img {
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: zoom-in 2s forwards ease-in-out;
+        }
+
+        h2 {
+            color: #FF5722; 
+            margin-top: 20px;
+            font-size: 2em;
+            animation: fade-in 2s ease-in;
+        }
+
+        p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            animation: fade-in 2.5s ease-in;
+        }
+
+        button {
+            background-color: #FF5722; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fade-in-up 3s forwards ease-in;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #FF3D00; 
+        }
+
+        
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoom-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slide-in-top {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="titulo">Alfa+</h1>
+        <h4>
+            <p>A prender</p>
+            <p>B uscar</p>
+            <p>C riar</p>
+        </h4>
+
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+        <h1>Sobre Nós</h1>
+
+        <img src="caminho/para/imagem.jpg" alt="fotinho" width="300" height="200">
+
+        <h2>Quem nós somos?</h2>
+        <p>Somos estudantes do 2 ano do EMI do campus IFPE- Jaboatão dos Guararapes, estamos cursando o técnico integrado em Desenvolvimento de Sistemas. Aprendendo o mundo dos códigos!</p>
+
+        <h2>Por quê escolhemos esse tema?</h2>
+        <p>Escolher o tema de alfabetização digital para adultos é crucial para garantir inclusão digital e acesso igualitário a oportunidades educacionais e profissionais. Habilidades tecnológicas são essenciais para a participação ativa no mercado de trabalho e para o gerenciamento eficiente da vida cotidiana. A alfabetização digital promove autonomia, segurança online e acesso a serviços e informações importantes. Também é fundamental para a participação cidadã, o aprendizado contínuo e a redução da desigualdade social. Além disso, aumenta a capacidade de adaptação às mudanças tecnológicas e estimula a criatividade e a inovação. Em um mundo digital em constante evolução, garantir que todos tenham essas habilidades é vital para uma sociedade mais equitativa e conectada.</p>
+
+        <h2>Qual nosso objetivo?</h2>
+        <p>Nosso objetivo é alcançar pessoas de todas as faixas etárias, e incluir a elas uma oportunidade de aprender o conceito básico da tecnologia digital. No tempo de evolução do site, nós iremos trazer variedades de ideias, informações, dinâmicas e muito mais! Possibilitando ainda mais a facilidade ao usuário dessa plataforma.</p>
+
+        <button onclick="window.location.href='pagina3.html'">Continuar</button>
+        <button onclick="window.location.href='home.html'">Voltar para a página inicial</button>
+    </div>
+</body>
+</html>

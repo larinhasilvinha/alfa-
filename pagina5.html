@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa +</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1.titulo {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: slide-in-top 1s ease-out;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 3em;
+            animation: fade-in 1.5s ease-in;
+        }
+
+        h1:hover {
+            color: #FFA500; 
+        }
+
+        h2 {
+            color: #555;
+            animation: fade-in 2s ease-in;
+        }
+
+        img {
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: zoom-in 2s forwards ease-in-out;
+        }
+
+        h3 {
+            animation: fade-in 2.5s ease-in;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fade-in-up 3s forwards ease-in;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+      
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-in-top {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoom-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="titulo">Alfa+</h1>
+        <h4>
+            <p>A prender</p>
+            <p>B uscar</p>
+            <p>C riar</p>
+        </h4>
+
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>PARABÉNS!</h1>
+    <h2>Você acabou de concluir o curso com sucesso.</h2>
+    <img src="caminho/para/imagem.jpg" alt="meme" width="300" height="200">
+    <h3>Continue aperfeiçoando seus novos conhecimentos e adquira as técnicas aprendidas no seu dia a dia, sucesso!</h3>
+    <button onclick="window.location.href='home.html'">Voltar para a página inicial</button>
+
+</body>
+</html>

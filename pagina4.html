@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa + Questionário</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ff6600;
+        }
+
+        h3 {
+            margin: 20px 0 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff7b00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        button {
+            background-color: #ff7b00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #ff7300;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            textarea {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Questionário do Curso</h1>
+        <h2>Coloque em prática o que você aprendeu no curso!</h2>
+
+      
+        <h3><strong>Questão 1</strong></h3>
+        <h3>O que é alfabetização digital e por que ela é importante no mundo moderno?</h3>
+        <form onsubmit="return submitAnswer(1);">
+            <textarea id="answer1" name="answer1" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+        <h3><strong>Questão 2</strong></h3>
+        <h3>Quais são os principais componentes de um computador e como eles funcionam juntos?</h3>
+        <form onsubmit="return submitAnswer(2);">
+            <textarea id="answer2" name="answer2" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+      
+        <h3><strong>Questão 3</strong></h3>
+        <h3>Como você pode criar e salvar um documento em um processador de texto?</h3>
+        <form onsubmit="return submitAnswer(3);">
+            <textarea id="answer3" name="answer3" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+       
+        <h3><strong>Questão 4</strong></h3>
+        <h3>O que é uma rede social e como você pode usá-la de forma segura e responsável?</h3>
+        <form onsubmit="return submitAnswer(4);">
+            <textarea id="answer4" name="answer4" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+      
+        <br>
+
+       
+        <button onclick="checkAllAnswers()">Concluir Curso</button>
+    </div>
+
+    <script>
+       
+        function submitAnswer(questionNumber) {
+            let answer = document.getElementById('answer' + questionNumber).value;
+
+            if (answer.trim() === "") {
+                alert("Por favor, responda a questão antes de enviar.");
+                return false;
+            }
+
+            alert("Resposta da Questão " + questionNumber + " enviada com sucesso!");
+            document.getElementById('answer' + questionNumber).value = ""; 
+            return false; 
+        }
+
+        function checkAllAnswers() {
+            let allAnswered = true;
+
+           
+            for (let i = 1; i <= 10; i++) {
+                let answer = document.getElementById('answer' + i);
+                if (answer && answer.value.trim() === "") {
+                    allAnswered = false;
+                    alert("Você precisa preencher todas as respostas antes de concluir o curso.");
+                    break;
+                }
+            }
+
+            
+            if (allAnswered) {
+                alert("Parabéns! Você concluiu o curso.");
+                window.location.href = 'pagina5.html'; 
+            }
+        }
+    </script>
+
+</body>
+</html>

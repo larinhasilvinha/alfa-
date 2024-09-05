@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa+</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .titulo {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff6600; 
+        }
+        .navbar {
+            background-color: #ff6600; 
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar li {
+            display: inline;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #ff6600; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #e65c00; 
+        }
+        button {
+            background-color: #ff6600; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #e65c00; 
+        }
+        .error {
+            color: red;
+            display: none;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function validarFormulario(event, idMensagem, idErro) {
+            const mensagem = document.getElementById(idMensagem).value.trim();
+            const erro = document.getElementById(idErro);
+
+            if (mensagem === "") {
+                erro.style.display = "block";
+                event.preventDefault();
+            } else {
+                erro.style.display = "none";
+            }
+        }
+
+        function configurarValidacao() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(event) {
+                    const idMensagem = form.querySelector('textarea').id;
+                    const idErro = form.querySelector('.error').id;
+                    validarFormulario(event, idMensagem, idErro);
+                });
+            });
+        }
+
+        window.onload = configurarValidacao;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Alfa+</h1>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <h1>Questionário do Curso</h1>
+        <h2>Este questionário serve para você por em prática o que aprendeu no curso. Coloque sua mente em prática, e boa sorte!</h2>
+
+       
+        <h3><strong>Questão 1:</strong> O que é um computador e para que serve?</h3>
+        <form>
+            <textarea id="mensagem1" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro1" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+        <h3><strong>Questão 2:</strong> O que é uma senha e por que é importante usá-la?</h3>
+        <form>
+            <textarea id="mensagem2" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro2" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+       
+        <h3><strong>Questão 3:</strong> O que você deve fazer se encontrar algo na internet que você não entende?</h3>
+        <form>
+            <textarea id="mensagem3" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro3" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+        <h3><strong>Questão 4:</strong> Como saber se o site é seguro para digitar?</h3>
+        <form>
+            <textarea id="mensagem4" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro4" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+        <h3><strong>Questão 5:</strong> Qual é a diferença entre um aplicativo e um site?</h3>
+        <form>
+            <textarea id="mensagem5" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro5" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <h3><strong>Questão 6:</strong> O que é uma rede social?</h3>
+        <form>
+            <textarea id="mensagem6" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro6" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+      
+        <h3><strong>Questão 7:</strong> O que é uma mensagem de e-mail?</h3>
+        <form>
+            <textarea id="mensagem7" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro7" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+        <h3><strong>Questão 8:</strong> Por que é importante não compartilhar qualquer tipo de arquivo visto?</h3>
+        <form>
+            <textarea id="mensagem8" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro8" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+       
+        <h3><strong>Questão 9:</strong> Como você pode proteger o computador de vírus?</h3>
+        <form>
+            <textarea id="mensagem9" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro9" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        
+        <h3><strong>Questão 10:</strong> O que é vírus?</h3>
+        <form>
+            <textarea id="mensagem10" rows="4" placeholder="Escreva a resposta aqui..."></textarea><br>
+            <span id="erro10" class="error">Por favor, preencha este campo.</span>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br>
+        <button onclick="window.location.href='pagina10.html'">Concluir Curso</button>
+    </div>
+</body>
+</html>
